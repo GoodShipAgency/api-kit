@@ -56,13 +56,13 @@ class ApiClient
 
     public function get($uri, $options = [])
     {
-        $headers = $options['headers'] ?? [];
+        $headers = isset($options['headers']) ? $options['headers'] : [];
         return $this->request($uri, 'GET', null, array_merge_recursive($this->headers, $headers));
     }
 
     public function options($uri, $options = [])
     {
-        $headers = $options['headers'] ?? [];
+        $headers = isset($options['headers']) ? $options['headers'] : [];
         return $this->request($uri, 'OPTIONS', null, array_merge_recursive($this->headers, $headers));
     }
 
@@ -90,7 +90,7 @@ class ApiClient
      */
     private function doPostStyleRequest($uri, $method, $data, $options)
     {
-        $headers = $options['headers'] ?? [];
+        $headers = isset($options['headers']) ? $options['headers'] : [];
         
         $encodedData = null;
         if (!is_null($data)) {
@@ -121,7 +121,7 @@ class ApiClient
 
     public function delete($uri, $options = [])
     {
-        $headers = $options['headers'] ?? [];
+        $headers = isset($options['headers']) ? $options['headers'] : [];
         return $this->request($uri, 'DELETE', null, array_merge_recursive($this->headers, $headers));
     }
 }
