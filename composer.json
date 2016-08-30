@@ -1,0 +1,14 @@
+{
+  "name": "mashbo/api-kit",
+  "license": "proprietary",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Mashbo\\Components\\ApiKit\\": "src/"
+    }
+  },
+  "require": {
+  },
+  "repositories": [
+  ]
+}
