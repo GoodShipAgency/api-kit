@@ -3,6 +3,7 @@
 namespace Mashbo\Components\ApiKit\Bridge\Symfony;
 
 use Mashbo\Components\ApiKit\Bridge\PhpUnit\ApiTest;
+use Mashbo\Components\HttpKernelHttpClient\HttpKernelHttpClient;
 use Mashbo\Components\Psr7ServerRequestFactory\SimulatedServerRequestFactory;
 use Mashbo\Components\SymfonyHttpClient\SymfonyHttpClientAdapter;
 use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
@@ -23,11 +24,11 @@ abstract class KernelApiTest extends ApiTest
     }
 
     /**
-     * @return SymfonyHttpClientAdapter
+     * @return HttpKernelHttpClient
      */
     protected function getHttpClient()
     {
-        return new SymfonyHttpClientAdapter(
+        return new HttpKernelHttpClient(
             $this->kernel,
             new HttpFoundationFactory(),
             new DiactorosFactory(),
