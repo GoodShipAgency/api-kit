@@ -27,7 +27,7 @@ class ApiClient
 
     public function getAbsoluteUri($path)
     {
-        return $this->baseUrl . $path;
+        return $this->baseUrl . str_replace($this->baseUrl, '', $path);
     }
 
     /**
