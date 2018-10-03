@@ -71,6 +71,11 @@ class ApiClient
         return $this->doPostStyleRequest($uri, 'POST', $data, $options);
     }
 
+    public function put($uri, $data = null, $options = [])
+    {
+        return $this->doPostStyleRequest($uri, 'PUT', $data, $options);
+    }
+
     public function patch($uri, $data = null, $options = [])
     {
         return $this->doPostStyleRequest($uri, 'PATCH', $data, $options);
