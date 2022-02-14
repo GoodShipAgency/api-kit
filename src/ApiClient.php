@@ -3,10 +3,10 @@
 namespace Mashbo\Components\ApiKit;
 
 use Http\Client\HttpClient;
+use Laminas\Diactoros\Request;
 use Mashbo\Components\ApiBuilder\Standards\Http\Encoders\Exceptions\EncodingNotSupportedException;
 use Mashbo\Components\ApiKit\Encoders\MultipartFormDataEncoder;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Request;
 
 class ApiClient
 {

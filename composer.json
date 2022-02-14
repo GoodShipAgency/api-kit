@@ -7,8 +7,17 @@
       "Mashbo\\Components\\ApiKit\\": "src/"
     }
   },
-  "require": {
-  },
   "repositories": [
-  ]
+    {
+      "type": "vcs",
+      "url": "git@gitlab.com:mashbo/api-builder.git"
+    }
+  ],
+  "require": {
+    "php": "^8",
+    "laminas/laminas-diactoros": "^2.8",
+    "mashbo/api-builder": "dev-master#a60f4b9445c4f1e784256dc8ac4323586ae06529",
+    "php-http/client-common": "^2.1",
+    "psr/http-message": "^1.0"
+  }
 }
